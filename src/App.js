@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+function App(){
+const [pokemons, setPokemons] = useState({});
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(false);
 
+
+useEffect(() => {
+  const getData = async () => {
+    try {
+      const res = await
+      axios.get('https://pokeapi.co/api/v2/pokemon/cyndaquil');
+        setPokemons(res.data);
+        console.log('Sucess:', res.data);
+        setLoading(false);
+
+    }
+    catch (err) {
+     console.error("Erro ao carregar API", err);
+     setLoading(false)
+     setError(true) 
+    }
+  };
+  getData();
+  }, {});
+
+    if (loading) return <div className="loader">Carregando Pokédex...</div>;
+
+    if (error) return <div className="error">Ocorreu um erro inesperado</div>;
+      
+      return (
+  <div className="App">
+  <h1>Poke Card</h1>
+  <div className="pokemon-container">
+    <div className="pokemon-card">
+      <h3>{pokemons.name}</h3>
+      <img src="./cyndaquil-removebg-preview.png" alt="cyndaquil" className="pokemon"/>
+        <h3>
+        {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
+        {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />
+        {pokemons.types[0].type.name}
+        </h3>
+      </div>
+    </div>
+  </div>
+  );
+  
+}
 export default App;

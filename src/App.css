@@ -2,6 +2,45 @@
   text-align: center;
 }
 
+
+h1{
+  font-size: x-large;
+  padding: 50px;
+}
+
+.pokemon-container{
+  text-align: center;
+  gap: 10px
+}
+
+.pokemon-card{
+  background-color:;
+  background-position: 0cm;
+  height: 490px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 30px black;
+  border-radius: 60px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+}
+
+body {
+  font-size: 30px;
+  background: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pokemon-card img{
+  height: 200px
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
