@@ -14,7 +14,6 @@ h1{
 }
 
 .pokemon-card{
-  background-color:;
   background-position: 0cm;
   height: 490px;
   width: 400px;
@@ -29,14 +28,16 @@ h1{
   justify-content: space-between;
   padding: 20px;
   text-align: center;
+  background: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
 }
 
 body {
   font-size: 30px;
-  background: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
   background-size: cover;
   background-position: center;
+  background-image: url("https://img.magnific.com/fotos-gratis/resumo-luxo-macio-fundo-vermelho-projeto-de-layout-dos-namorados-de-natal-estudio-sala-modelo-da-web-relatorio-de-negocios-com-cor-gradiente-de-circulo-suave_1258-54172.jpg?semt=ais_hybrid&w=740&q=80");
 }
+
 .pokemon-card img{
   height: 200px
 }

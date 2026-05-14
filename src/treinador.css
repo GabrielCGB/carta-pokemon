@@ -1,0 +1,56 @@
+.paginaTreinador{
+    min-height: 100vh;
+    background-image: url('https://plus.unsplash.com/premium_photo-1671829480432-9b0f10d869ef?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.imagemTreinador{
+    background-position: 0cm;
+    height: auto;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 30px black;
+    border-radius: 60px;
+    border-style: solid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.titulo{
+    font-size: x-large;
+    padding: 50px;
+    text-align: center;
+}
+
+.Informacoes{
+    font-size: 20px;
+    text-align: center;
+}
+
+.botoes{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.botoes:hover{
+    cursor: pointer;
+}
+
+.botoes img{
+    border: none;
+    background: transparent;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    padding: 10px
+}
