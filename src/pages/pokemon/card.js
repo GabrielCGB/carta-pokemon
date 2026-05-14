@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './App.css';
+import cyndaquil from '../../assets/cyndaquil.png'
 
 function Pokecard(){
 const [pokemons, setPokemons] = useState({});
@@ -37,7 +38,7 @@ useEffect(() => {
   <div className="pokemon-container">
     <div className="pokemon-card">
       <h3>{pokemons.name}</h3>
-      <img src="./cyndaquil.png" alt="cyndaquil" className="pokemon"/>
+      <img src={cyndaquil} alt="cyndaquil"/>
         <h3>
         {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
         {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />

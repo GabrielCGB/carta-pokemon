@@ -1,0 +1,79 @@
+.App {
+    text-align: center;
+  }
+  
+  
+  h1{
+    font-size: x-large;
+    padding: 50px;
+  }
+  
+  .pokemon-container{
+    text-align: center;
+    gap: 10px
+  }
+  
+  .pokemon-card{
+    background-position: 0cm;
+    height: 490px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 30px black;
+    border-radius: 60px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    background-image: url("https://wallpapers.com/images/hd/hd-nature-background-nzot3xtc5xd1r4gn.jpg");
+  }
+  
+  body {
+    font-size: 30px;
+    background-size: cover;
+    background-position: center;
+    background: url("https://img.magnific.com/fotos-premium/natureza-de-folha-verde-usando-como-fundo-ou-papel-de-parede_103077-79.jpg");
+  }
+  
+  .pokemon-card img{
+    height: 200px
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

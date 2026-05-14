@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import './App.css';
+import './card2.css';
+import turtwig from '../../assets/turtwig.png';
 
-function Pokecard(){
+function PokeDois(){
 const [pokemons, setPokemons] = useState({});
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(false);
@@ -12,7 +13,7 @@ useEffect(() => {
   const getData = async () => {
     try {
       const res = await
-      axios.get('https://pokeapi.co/api/v2/pokemon/cyndaquil');
+      axios.get('https://pokeapi.co/api/v2/pokemon/turtwig');
         setPokemons(res.data);
         console.log('Sucess:', res.data);
         setLoading(false);
@@ -37,7 +38,7 @@ useEffect(() => {
   <div className="pokemon-container">
     <div className="pokemon-card">
       <h3>{pokemons.name}</h3>
-      <img src="./cyndaquil.png" alt="cyndaquil" className="pokemon"/>
+      <img src={turtwig} alt="turtwig"/>
         <h3>
         {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
         {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />
@@ -49,4 +50,4 @@ useEffect(() => {
   );
   
 }
-export default Pokecard;
+export default PokeDois;
