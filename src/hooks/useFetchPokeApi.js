@@ -1,5 +1,9 @@
-function Pokecard(){
-    const [Pokemon, setPokemons] = useState({});
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+
+function useFetchPokeApi(Pokemon){
+    const [pokemons, setPokemons] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     
@@ -8,7 +12,7 @@ function Pokecard(){
       const getData = async () => {
         try {
           const res = await
-          axios.get('https://pokeapi.co/api/v2/pokemon/cyndaquil');
+          axios.get(`https://pokeapi.co/api/v2/pokemon/${Pokemon}`);
             setPokemons(res.data);
             console.log('Sucess:', res.data);
             setLoading(false);
@@ -20,7 +24,8 @@ function Pokecard(){
          setError(true) 
         }
       };
-      getData(),[Pokemon];
-      }, {});
+      getData();
+    }, [pokemons]);
+      return{pokemons, loading, error}};
 
-      return(Pokemon, loading, error);
+      export default useFetchPokeApi;

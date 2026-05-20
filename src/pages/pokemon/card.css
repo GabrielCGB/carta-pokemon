@@ -1,16 +1,25 @@
+.vulcao{
+  background: url("https://img.magnific.com/fotos-gratis/resumo-luxo-macio-fundo-vermelho-projeto-de-layout-dos-namorados-de-natal-estudio-sala-modelo-da-web-relatorio-de-negocios-com-cor-gradiente-de-circulo-suave_1258-54172.jpg?semt=ais_hybrid&w=740&q=80");
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .App {
   text-align: center;
 }
 
 
 h1{
-  font-size: x-large;
+  margin: 0;
   padding: 50px;
+  font-size: x-large;
 }
 
 .pokemon-container{
   text-align: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .pokemon-card{
@@ -28,18 +37,25 @@ h1{
   justify-content: space-between;
   padding: 20px;
   text-align: center;
-  background: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
+  background-image: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
 }
 
 body {
-  font-size: 30px;
-  background-size: cover;
-  background-position: center;
-  background-image: url("https://img.magnific.com/fotos-gratis/resumo-luxo-macio-fundo-vermelho-projeto-de-layout-dos-namorados-de-natal-estudio-sala-modelo-da-web-relatorio-de-negocios-com-cor-gradiente-de-circulo-suave_1258-54172.jpg?semt=ais_hybrid&w=740&q=80");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
 }
 
 .pokemon-card img{
   height: 200px
+}
+
+.pokemon-card.fire{
+  border: 2px solid orange;
+}
+.pokemon-card.grass{
+  border: 2px solid green
 }
 
 .App-logo {

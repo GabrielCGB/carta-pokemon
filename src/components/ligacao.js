@@ -8,11 +8,11 @@ export function Ligacoes(){
 
         <div className="botoes">
 
-            <Link to="/pokemon1">
+            <Link to="/pokemon/cyndaquil">
                 <img src={pokebola} alt="Pokebola1"/>
             </Link>
 
-            <Link to="/pokemon2">
+            <Link to="/pokemon/turtwig">
                 <img src={pokebola} alt="Pokebola2"/>
             </Link>
 

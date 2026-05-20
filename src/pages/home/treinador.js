@@ -24,7 +24,7 @@ function Trainer(){
             <p>Nome completo: Gabriel do Carmo Guilger Branco</p>
             <p>Idade: 18</p>
             <p>Nickname: Gabriel_CGB</p>
-            <p>Quantidade de Pokémons: 1</p>
+            <p>Quantidade de Pokémons: 2</p>
             <p>Quantidades de badges: 0</p>
 
 

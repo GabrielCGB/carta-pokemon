@@ -1,19 +1,28 @@
+.natureza{
+  background: url("https://img.magnific.com/fotos-premium/natureza-de-folha-verde-usando-como-fundo-ou-papel-de-parede_103077-79.jpg");
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .App {
     text-align: center;
   }
   
   
   h1{
-    font-size: x-large;
+    margin: 0;
     padding: 50px;
+    font-size: x-large;;
   }
   
-  .pokemon-container{
+  .pokemonContainer{
     text-align: center;
-    gap: 10px
+    gap: 10px;
   }
   
-  .pokemon-card{
+  .card-pokemon{
     background-position: 0cm;
     height: 490px;
     width: 400px;
@@ -32,14 +41,14 @@
   }
   
   body {
-    font-size: 30px;
-    background-size: cover;
-    background-position: center;
-    background: url("https://img.magnific.com/fotos-premium/natureza-de-folha-verde-usando-como-fundo-ou-papel-de-parede_103077-79.jpg");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
   }
   
   .pokemon-card img{
-    height: 200px
+    height: 200px;
   }
   
   .App-logo {

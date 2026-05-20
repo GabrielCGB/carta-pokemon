@@ -15,9 +15,9 @@ function App(){
 
             <Route path="/" element={<Trainer/>}/>
 
-            <Route path="/pokemon1"element={<Pokecard/>}/>
+            <Route path="/pokemon/:id"element={<Pokecard/>}/>
 
-            <Route path="/pokemon2"element={<PokeDois/>}/>
+            <Route path="/pokemon2/:id"element={<PokeDois/>}/>
 
         </Routes>
 
