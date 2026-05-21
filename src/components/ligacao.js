@@ -16,7 +16,11 @@ export function Ligacoes(){
                 <img src={pokebola} alt="Pokebola2"/>
             </Link>
 
-            <Link to="/pokemon3">
+            <Link to="/pokemon/cubone">
+                <img src={pokebola} alt="Pokebola3"/>
+            </Link>
+            
+            <Link to="/pokemon/cubone">
                 <img src={pokebola} alt="Pokebola3"/>
             </Link>
 

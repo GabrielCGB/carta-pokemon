@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import './card2.css';
-import turtwig from '../../assets/turtwig.png';
+import './card.css';
 import useFetchPokeApi from '../../hooks/useFetchPokeApi';
 import {useParams} from 'react-router-dom';
 
@@ -20,7 +19,7 @@ const {pokemons, loading, error} = useFetchPokeApi(id);
   <div className="pokemonContainer">
     <div className="card-pokemon">
       <h3>{pokemons.name}</h3>
-      <img src={turtwig} alt="turtwig"/>
+      <div className="pokemonimagem"></div>
          <h3>
           {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
           {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />

@@ -17,8 +17,6 @@ function App(){
 
             <Route path="/pokemon/:id"element={<Pokecard/>}/>
 
-            <Route path="/pokemon2/:id"element={<PokeDois/>}/>
-
         </Routes>
 
         </BrowserRouter>

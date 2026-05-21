@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import './card.css';
+import './card3.css';
 import useFetchPokeApi from '../../hooks/useFetchPokeApi';
 import {useParams} from 'react-router-dom';
 
-function Pokecard(){
+function PokeTres(){
 const { id } = useParams();
 const {pokemons, loading, error} = useFetchPokeApi(id); 
+const [imagem, setImagem] = useState("cyndaquil")
+
+    if(pokemons.name == "turtwig"){
+
+    }
 
     if (loading) return <div className="loader">Carregando Pokédex...</div>;
 
@@ -18,7 +23,6 @@ const {pokemons, loading, error} = useFetchPokeApi(id);
   <div className="pokemon-container">
     <div className={`pokemon-card ${pokemons.types[0].type.name}`}>
       <h3>{pokemons.name}</h3>
-      <div className={`pokemonimagem ${pokemons.name}`}></div>
           <h3>
           {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
           {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />
@@ -30,4 +34,4 @@ const {pokemons, loading, error} = useFetchPokeApi(id);
   );
   
 }
-export default Pokecard;
+export default PokeTres;

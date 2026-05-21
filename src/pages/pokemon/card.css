@@ -1,20 +1,15 @@
-.vulcao{
-  background: url("https://img.magnific.com/fotos-gratis/resumo-luxo-macio-fundo-vermelho-projeto-de-layout-dos-namorados-de-natal-estudio-sala-modelo-da-web-relatorio-de-negocios-com-cor-gradiente-de-circulo-suave_1258-54172.jpg?semt=ais_hybrid&w=740&q=80");
-  min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.App {
-  text-align: center;
-}
-
-
 h1{
   margin: 0;
   padding: 50px;
   font-size: x-large;
+}
+
+.botoes{
+  
+}
+
+.App {
+  text-align: center;
 }
 
 .pokemon-container{
@@ -47,15 +42,50 @@ body {
   font-size: 25px;
 }
 
-.pokemon-card img{
-  height: 200px
-}
-
 .pokemon-card.fire{
   border: 2px solid orange;
 }
 .pokemon-card.grass{
-  border: 2px solid green
+  border: 2px solid green;
+  background: url("https://img.magnific.com/fotos-premium/natureza-de-folha-verde-usando-como-fundo-ou-papel-de-parede_103077-79.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pokemon-card.ground{
+  border: 2px solid brown;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQadjmW9sQrTklKPd-McskQF9bQbdmIo1UGA&s");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pokemonimagem.turtwig{
+  background: url("../../assets/turtwig.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+.pokemonimagem.cyndaquil{
+  background: url("../../assets/cyndaquil.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+.pokemonimagem.cubone{
+  background: url("../../assets/cubone.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
 }
 
 .App-logo {
