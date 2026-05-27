@@ -7,11 +7,6 @@ import {useParams} from 'react-router-dom';
 function PokeTres(){
 const { id } = useParams();
 const {pokemons, loading, error} = useFetchPokeApi(id); 
-const [imagem, setImagem] = useState("cyndaquil")
-
-    if(pokemons.name == "turtwig"){
-
-    }
 
     if (loading) return <div className="loader">Carregando Pokédex...</div>;
 

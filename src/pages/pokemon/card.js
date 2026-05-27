@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
 import './card.css';
 import useFetchPokeApi from '../../hooks/useFetchPokeApi';
 import {useParams} from 'react-router-dom';
