@@ -61,13 +61,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.pokemonimagem.turtwig{
-  background: url("../../assets/turtwig.png");
+.pokemon-card.dark{
+  border: 2px solid purple;
+  background: url("https://t4.ftcdn.net/jpg/03/14/20/09/360_F_314200930_dR5YrwQfjw5zTCVWtmRggDVbOw4Ce6p8.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
 }
 
 .pokemonimagem.cyndaquil{
@@ -79,8 +78,27 @@ body {
   width: 200px;
 }
 
+.pokemonimagem.turtwig{
+  background: url("../../assets/turtwig.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+
 .pokemonimagem.cubone{
   background: url("../../assets/cubone.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+.pokemonimagem.sableye{
+  background: url("../../assets/sableye.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

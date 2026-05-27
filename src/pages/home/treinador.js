@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import treinador from '../../assets/ashCation.png';
 import { Ligacoes } from '../../components/ligacao';
 import './treinador.css';
@@ -24,7 +23,7 @@ function Trainer(){
             <p>Nome completo: Gabriel do Carmo Guilger Branco</p>
             <p>Idade: 18</p>
             <p>Nickname: Gabriel_CGB</p>
-            <p>Quantidade de Pokémons: 3</p>
+            <p>Quantidade de Pokémons: 4</p>
             <p>Quantidades de badges: 0</p>
 
 
