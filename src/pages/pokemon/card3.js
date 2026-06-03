@@ -18,11 +18,6 @@ const {pokemons, loading, error} = useFetchPokeApi(id);
   <div className="pokemon-container">
     <div className={`pokemon-card ${pokemons.types[0].type.name}`}>
       <h3>{pokemons.name}</h3>
-          <h3>
-          {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
-          {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />
-          {pokemons.types[0].type.name}
-          </h3>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-function useFetchPokeApi(Pokemon){
+function useFetchPokeApi(endpoint, Pokemon){
     const [pokemons, setPokemons] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -12,7 +12,7 @@ function useFetchPokeApi(Pokemon){
       const getData = async () => {
         try {
           const res = await
-          axios.get(`https://pokeapi.co/api/v2/pokemon/${Pokemon}`);
+          axios.get(`https://pokeapi.co/api/v2/${endpoint}/${Pokemon}`);
             setPokemons(res.data);
             console.log('Sucess:', res.data);
             setLoading(false);

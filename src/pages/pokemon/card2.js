@@ -20,7 +20,8 @@ const {pokemons, loading, error} = useFetchPokeApi(id);
     <div className="card-pokemon">
       <h3>{pokemons.name}</h3>
       <div className="pokemonimagem"></div>
-         <h3>
+
+      <h3>
           {pokemons.stats[0].stat.name} {pokemons.stats[0].base_stat} <br />
           {pokemons.stats[1].stat.name} {pokemons.stats[1].base_stat} <br />
           {pokemons.types[0].type.name}

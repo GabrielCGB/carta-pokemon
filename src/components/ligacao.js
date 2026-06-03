@@ -23,11 +23,6 @@ export function Ligacoes(){
             <Link to="/pokemon/sableye">
                 <img src={pokebola} alt="Pokebola4"/>
             </Link>
-            
-            <Link to="/pokemon/sableye">
-                <img src={pokebola} alt="Pokebola4"/>
-            </Link>
-
         </div>
     );
 }
