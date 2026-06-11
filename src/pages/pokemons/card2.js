@@ -7,6 +7,18 @@ import {useParams} from 'react-router-dom';
 function PokeDois(){
 const { id } = useParams();
 const {pokemons, loading, error} = useFetchPokeApi(id); 
+const [pokemonInGame, setPokemonInGame] = useState({});
+  useEffect(() => {
+    if (pokemons) {
+      setPokemonInGame({
+        "nome": pokemons.name,
+        "vida": pokemons.stats[0].base_stat,
+        "ataque": pokemons.stats[1].base_stat,
+        "tipo": pokemons.types[0].type.name 
+      });
+    }
+  }, [pokemons]);
+  const especie = async () => { await axios.get(pokemons.species.url)};
 
     if (loading) return <div className="loader">Carregando Pokédex...</div>;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import{ Route,BrowserRouter, Routes } from "react-router-dom";
 import Trainer from "./pages/home/treinador";
-import Pokecard from "./pages/pokemon/card";
+import Pokecard from "./pages/pokemons/card";
 
 
 function App(){

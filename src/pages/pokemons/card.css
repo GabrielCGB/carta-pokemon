@@ -38,7 +38,7 @@ body {
   font-size: 20px;
 }
 
-.pokemon-card.fire{
+.pokemon-card{
   border: 2px solid orange;
 }
 .pokemon-card.grass{
