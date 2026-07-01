@@ -28,7 +28,6 @@ h1{
   justify-content: space-between;
   padding: 20px;
   text-align: center;
-  background-image: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
 }
 
 body {
@@ -38,10 +37,14 @@ body {
   font-size: 20px;
 }
 
-.pokemon-card{
+.pokemon-card.Fogo{
   border: 2px solid orange;
+  background-image: url("https://thumbs.dreamstime.com/b/lava-quente-e-rocha-dentro-da-ilustra%C3%A7%C3%A3o-do-vulc%C3%A3o-d-papel-de-parede-na-forma-fant%C3%A1sticas-montanhas-queimadas-encostas-um-com-216287302.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.pokemon-card.grass{
+.pokemon-card.Natureza{
   border: 2px solid green;
   background: url("https://img.magnific.com/fotos-premium/natureza-de-folha-verde-usando-como-fundo-ou-papel-de-parede_103077-79.jpg");
   background-size: cover;
@@ -49,7 +52,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.pokemon-card.ground{
+.pokemon-card.Terra{
   border: 2px solid brown;
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQadjmW9sQrTklKPd-McskQF9bQbdmIo1UGA&s");
   background-size: cover;
@@ -57,49 +60,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.pokemon-card.dark{
+.pokemon-card.Sombra{
   border: 2px solid purple;
   background: url("https://t4.ftcdn.net/jpg/03/14/20/09/360_F_314200930_dR5YrwQfjw5zTCVWtmRggDVbOw4Ce6p8.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.pokemonimagem.cyndaquil{
-  background: url("../../assets/cyndaquil.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
-}
-
-.pokemonimagem.turtwig{
-  background: url("../../assets/turtwig.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
-}
-
-
-.pokemonimagem.cubone{
-  background: url("../../assets/cubone.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
-}
-
-.pokemonimagem.sableye{
-  background: url("../../assets/sableye.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
 }
 
 .App-logo {

@@ -11,6 +11,7 @@ const {myPokemon, loading, error} = useFetchPokeApi(id);
     if (loading) return <div className="loader">Carregando Pokédex...</div>;
 
     if (error) return <div className="error">Ocorreu um erro inesperado</div>;
+    
 
       return (  
   <div className="App">
@@ -18,7 +19,7 @@ const {myPokemon, loading, error} = useFetchPokeApi(id);
   <div className="pokemon-container">
     <div className={`pokemon-card ${myPokemon.tipo}`}>
       <h3>{myPokemon.nome}</h3>
-      <div className={`pokemonimagem ${myPokemon.imagem}`}></div>
+      <div className="pokemonimagem" src={myPokemon.imagem}/>
           <h3>
             {"Vida: "+ myPokemon.vida} <br />
             {"Ataque: " + myPokemon.vida} <br />
@@ -30,4 +31,6 @@ const {myPokemon, loading, error} = useFetchPokeApi(id);
   );
   
 }
+
+
 export default Pokecard;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { getPokemonDB, savePokemonDB } from "../utils/pokemonDB.js";
 
 
 function useFetchPokeApi(pokemon){
@@ -9,7 +10,7 @@ function useFetchPokeApi(pokemon){
     const [specie, setSpecie] = useState({});
     const [evolution, setEvolution] = useState({});
     const [myPokemon, setMyPokemon] = useState({});
-    const [type, setType] = useState({});
+    const [tipo, setTipo] = useState({});
     
     
     useEffect(() => {
@@ -19,31 +20,40 @@ function useFetchPokeApi(pokemon){
             setPokemons(res.data);
             console.log('Sucess:', res.data);
             setLoading(false);
-    
         }
         catch (err) {
          console.error("Erro ao carregar API", err);
          setLoading(false)
-         setError(true) 
+         setError(true)
+
         }
       };
-      getData();
+
+      const checkCache = async () => {
+        const cached = await getPokemonDB(pokemon)
+        if(!cached){
+          setMyPokemon(cached);
+          setLoading(false);
+        } else {
+          await getData()
+        }
+      };
+      checkCache();
     }, [pokemon]);
 
     useEffect(() => {
-      const getSpecies = async () => {
+      const getSpecie = async () => {
         try {
           const res = await axios.get (pokemons.species.url, {});
             setSpecie(res.data);
             console.log('Sucess:', res.data);
-            setLoading(false);
     
         }
         catch (err) {
          console.error("Erro ao carregar API", err);
         }
       };
-      getSpecies();
+      getSpecie();
     }, [pokemons]);
 
     useEffect(() => {
@@ -52,7 +62,6 @@ function useFetchPokeApi(pokemon){
           const res = await axios.get (specie.evolution_chain.url, {});
             setEvolution(res.data);
             console.log('Sucess:', res.data);
-            setLoading(false);
     
         }
         catch (err) {
@@ -66,28 +75,28 @@ function useFetchPokeApi(pokemon){
       const getTypes = async () => {
         try {
         if(pokemons.types[0].type.name == "grass" || pokemons.types[0].type.name == "poison" || pokemons.types[0].type.name == "bug" ){
-          pokemons.types[0].type.name = "Natureza"
+          setTipo('Natureza')
           }  
         if(pokemons.types[0].type.name == 'rock' || pokemons.types[0].type.name == 'ground' || pokemons.types[0].type.name == "steel" ){
-          pokemons.types[0].type.name = "Terra"
+          setTipo('Terra')
           }
         if(pokemons.types[0].type.name == "water" || pokemons.types[0].type.name == "ice" ){
-          pokemons.types[0].type.name = "Água"
+          setTipo('Agua')
           }
         if(pokemons.types[0].type.name == "fire" ){
-          pokemons.types[0].type.name = "Fogo"
+          setTipo('Fogo')
           }
         if(pokemons.types[0].type.name == "dragon" || pokemons.types[0].type.name == "eletric" || pokemons.types[0].type.name == "flying" ){
-          pokemons.types[0].type.name = "Tempestade"
+          setTipo('Tempestade')
           }
         if(pokemons.types[0].type.name == "normal" || pokemons.types[0].type.name == "fighting" ){
-          pokemons.types[0].type.name = "Corpo"
+          setTipo('Corpo')
           }
           if(pokemons.types[0].type.name == "psychic" || pokemons.types[0].type.name == "fairy" ){
-            pokemons.types[0].type.name = "Mente"
+          setTipo('Mente')
             }
         if(pokemons.types[0].type.name == "shadow" || pokemons.types[0].type.name == "dark" ){
-          pokemons.types[0].type.name = "Sombra"
+          setTipo('Sombra')
           }
         
         }
@@ -96,25 +105,26 @@ function useFetchPokeApi(pokemon){
         }
       };
       getTypes();
-    }, [specie]);
+    }, [pokemons]);
 
     useEffect(() => {
       const setPoke = async () => {
         try {
       setMyPokemon({
+        tipo: tipo,
         nome: pokemons.name,
-        vida: pokemons.stats[0].base_stat,
+        vida: pokemons.stats[0].base_stat * 10,
         ataque: pokemons.stats[1].base_stat,
-        tipo: pokemons.types[0].type.name,
-        evolucao: [evolution.chain.species.name],
         imagem: pokemons.sprites.front_default,
-      });
-      } catch (err) {
+        evolucao: [evolution.chain.species.name, evolution.chain.species.name, evolution.chain.species.name],
+        });
+      }
+      catch (err) {
         console.error(err);
       }
     };
       setPoke()
-    }, [evolution, pokemons]);
+    }, [evolution, pokemons, tipo]);
 
       return{myPokemon, loading, error}};
 
