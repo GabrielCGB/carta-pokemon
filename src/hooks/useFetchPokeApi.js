@@ -10,7 +10,7 @@ function useFetchPokeApi(pokemon){
     const [specie, setSpecie] = useState({});
     const [evolution, setEvolution] = useState({});
     const [myPokemon, setMyPokemon] = useState({});
-    const [tipo, setTipo] = useState({});
+    const [tipo, setTipo] = useState("");
     
     
     useEffect(() => {
@@ -39,6 +39,8 @@ function useFetchPokeApi(pokemon){
         }
       };
       checkCache();
+      getData();
+      
     }, [pokemon]);
 
     useEffect(() => {
@@ -74,57 +76,66 @@ function useFetchPokeApi(pokemon){
     useEffect(() => {
       const getTypes = async () => {
         try {
-        if(pokemons.types[0].type.name == "grass" || pokemons.types[0].type.name == "poison" || pokemons.types[0].type.name == "bug" ){
+        if(pokemons.types[0].type.name === "grass" || pokemons.types[0].type.name === "poison" || pokemons.types[0].type.name === "bug" ){
           setTipo('Natureza')
           }  
-        if(pokemons.types[0].type.name == 'rock' || pokemons.types[0].type.name == 'ground' || pokemons.types[0].type.name == "steel" ){
+        if(pokemons.types[0].type.name === 'rock' || pokemons.types[0].type.name === 'ground' || pokemons.types[0].type.name === "steel" ){
           setTipo('Terra')
           }
-        if(pokemons.types[0].type.name == "water" || pokemons.types[0].type.name == "ice" ){
+        if(pokemons.types[0].type.name === "water" || pokemons.types[0].type.name === "ice" ){
           setTipo('Agua')
           }
-        if(pokemons.types[0].type.name == "fire" ){
+        if(pokemons.types[0].type.name === "fire" ){
           setTipo('Fogo')
           }
-        if(pokemons.types[0].type.name == "dragon" || pokemons.types[0].type.name == "eletric" || pokemons.types[0].type.name == "flying" ){
+        if(pokemons.types[0].type.name === "dragon" || pokemons.types[0].type.name === "eletric" || pokemons.types[0].type.name === "flying" ){
           setTipo('Tempestade')
           }
-        if(pokemons.types[0].type.name == "normal" || pokemons.types[0].type.name == "fighting" ){
+        if(pokemons.types[0].type.name === "normal" || pokemons.types[0].type.name === "fighting" ){
           setTipo('Corpo')
           }
-          if(pokemons.types[0].type.name == "psychic" || pokemons.types[0].type.name == "fairy" ){
+          if(pokemons.types[0].type.name === "psychic" || pokemons.types[0].type.name === "fairy" ){
           setTipo('Mente')
             }
-        if(pokemons.types[0].type.name == "shadow" || pokemons.types[0].type.name == "dark" ){
+        if(pokemons.types[0].type.name === "shadow" || pokemons.types[0].type.name === "dark" ){
           setTipo('Sombra')
           }
-        
+        console.log("tipo:", tipo)
         }
         catch (err) {
          console.error("Erro ao carregar API", err);
         }
       };
       getTypes();
-    }, [pokemons]);
+    }, [pokemons, pokemon, evolution, tipo]);
 
     useEffect(() => {
       const setPoke = async () => {
         try {
+
       setMyPokemon({
         tipo: tipo,
         nome: pokemons.name,
         vida: pokemons.stats[0].base_stat * 10,
         ataque: pokemons.stats[1].base_stat,
+        defesa: pokemons.stats[2].base_stat,
+        velocidade: pokemons.stats[5].base_stat,
         imagem: pokemons.sprites.front_default,
         evolucao: [evolution.chain.species.name, evolution.chain.species.name, evolution.chain.species.name],
         });
+        
+        console.log(myPokemon);
+        setLoading(false);
+        await savePokemonDB(myPokemon);
       }
+        
+
       catch (err) {
         console.error(err);
       }
     };
       setPoke()
-    }, [evolution, pokemons, tipo]);
+    }, [evolution, pokemons, tipo, myPokemon]);
 
       return{myPokemon, loading, error}};
 
