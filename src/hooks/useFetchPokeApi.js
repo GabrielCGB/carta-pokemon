@@ -120,7 +120,7 @@ function useFetchPokeApi(pokemon){
         ataque: pokemons.stats[1].base_stat,
         defesa: pokemons.stats[2].base_stat,
         velocidade: pokemons.stats[5].base_stat,
-        imagem: pokemons.sprites.front_default,
+        img: pokemons.sprites.front_default,
         evolucao: [evolution.chain.species.name, evolution.chain.species.name, evolution.chain.species.name],
         });
         

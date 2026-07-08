@@ -19,7 +19,7 @@ const {myPokemon, loading, error} = useFetchPokeApi(id);
   <div className="pokemon-container">
     <div className={`pokemon-card ${myPokemon.tipo}`}>
       <h3>{myPokemon.nome}</h3>
-      <div className={`pokemonimagem ${myPokemon.imagem}`}/>
+      <img src={myPokemon.img} className="pokemon-img"></img>
           <h3>
             {"Vida: " + myPokemon.vida} <br/>
             {"Ataque: " + myPokemon.ataque} <br/>
